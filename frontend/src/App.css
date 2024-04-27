@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+
+  padding-top: .2rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+}
