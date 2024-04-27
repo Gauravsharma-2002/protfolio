@@ -5,6 +5,7 @@ import { useState, useReducer } from "react";
 import { FaBars } from "react-icons/fa6";
 import { RxCross2 } from "react-icons/rx";
 import { RiAccountPinCircleFill } from "react-icons/ri";
+
 const initialVal = true;
 function reducerMethod(state, action) {
   switch (action.type) {
@@ -67,6 +68,9 @@ const Header = () => {
 };
 
 function NavPage({ dispatch }) {
+  const styel = {
+    
+  }
   return (
     <>
       <Stack
@@ -113,8 +117,19 @@ function NavPage({ dispatch }) {
             justifyContent={"center"}
             alignItems={"center"}
             display={"flex"}
+            style={{
+              cursor: "pointer",
+              color: "#FFFFFF",
+              backgroundColor: "rgb(62, 84, 172)",
+            }}
+            height={"100%"}
+           
           >
-            <Link to={"/project"} onClick={() => dispatch({ type: "close" })}>
+            <Link
+              to={"/project"}
+              onClick={() => dispatch({ type: "close" })}
+              style={{}}
+            >
               Projects
             </Link>
           </Box>
@@ -123,6 +138,8 @@ function NavPage({ dispatch }) {
             justifyContent={"center"}
             alignItems={"center"}
             display={"flex"}
+            style={{ cursor: "pointer" }}
+            height={"100%"}
           >
             <Link to={"/about"} onClick={() => dispatch({ type: "close" })}>
               About
@@ -133,6 +150,8 @@ function NavPage({ dispatch }) {
             justifyContent={"center"}
             alignItems={"center"}
             display={"flex"}
+            style={{ cursor: "pointer" }}
+            height={"100%"}
           >
             <Link to={"/contact"} onClick={() => dispatch({ type: "close" })}>
               Contact
@@ -143,6 +162,8 @@ function NavPage({ dispatch }) {
             justifyContent={"center"}
             alignItems={"center"}
             display={"flex"}
+            style={{ cursor: "pointer" }}
+            height={"100%"}
           >
             <Link to={"/login"} onClick={() => dispatch({ type: "close" })}>
               <RiAccountPinCircleFill color="#3E54AC" size={"5rem"} />
